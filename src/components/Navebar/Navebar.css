@@ -1,0 +1,139 @@
+
+.icon,.bellicon,.dropdownimg,.profile{
+    width: 20px;
+    cursor: pointer;
+    position: relative;
+}
+.navebar{
+    display: flex;
+    width: 100%;
+    padding: 20px 4%;
+    position: fixed;
+    justify-content: space-between;
+    font-size: 14px;
+    z-index: 2;
+}
+.navebar-left{
+    display: flex;
+    text-align: center;
+    gap: 50px;
+}
+.navebar-left ul{
+    display: flex;
+    list-style: none;
+    gap: 20px;
+    margin-top: 2%;
+    cursor: pointer;
+}
+.navebar-left img{
+    width: 10%;
+}
+.navebar-right{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+.profile1{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+.dropdown {
+  position: absolute;
+  top: 80px;
+  right: 0;
+  background: #111;
+  padding: 10px;
+  border-radius: 4px;
+  box-shadow: 0 0 10px rgba(255, 0, 0, 0.2);
+  color: white;
+  cursor: pointer;
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.profile1:hover .dropdown,
+.profile1 .dropdown.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+.dropdown p{
+    font-size: 14px;
+    cursor: pointer;
+}
+/* .profile1:hover .dropdown{
+    display: block;
+ } */
+
+.search-input{
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+ background-color: rgba(0, 0, 0, 0.574);
+ color: white;
+}
+.search-input::placeholder{
+    color: white;
+}
+
+.nav-dark{
+    background: #141414;
+}
+
+
+
+@media screen and (max-width: 768px) {
+  .navebar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px 20px;
+  }
+
+  .navebar-left {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .navebar-left ul {
+    display: none; /* Hide menu by default */
+    flex-direction: column;
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .navebar-left ul.show {
+    display: flex;
+  }
+
+  .navebar-left ul li {
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .navebar-right {
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .search-input {
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .profile1 {
+    position: relative;
+  }
+
+  .dropdown {
+    position: absolute;
+    top: 40px;
+    right: 0;
+    background: rgba(0,0,0,0.8);
+    padding: 10px;
+    border-radius: 5px;
+    z-index: 10;
+  }
+}
