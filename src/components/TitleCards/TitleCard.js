@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react'
 import './TitleCard.css'
-import Cards_data from '../../assets/Cards/Cards_data'
 import { Link } from 'react-router-dom'
 const TitleCard = ({title,catagery}) => {
   const [apiData,setApiData]=useState([]);
